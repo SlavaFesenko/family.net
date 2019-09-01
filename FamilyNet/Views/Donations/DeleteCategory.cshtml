@@ -1,0 +1,15 @@
+﻿@model FamilyNet.Models.BaseItemType
+
+@{
+    ViewData["Title"] = "Удаление";
+
+}
+
+<h3>Ви впевнені, що хочете видалити категорію?</h3>
+<div>
+    <form asp-action="DeleteCategory">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Видалити" class="btn btn-danger" />
+        <a class="btn btn-danger" asp-action="CategoriesTable">Повернутися</a>
+    </form>
+</div>
