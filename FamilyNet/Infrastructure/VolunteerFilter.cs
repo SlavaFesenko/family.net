@@ -1,4 +1,5 @@
-﻿using FamilyNet.Models;
+﻿using EntityFramework.Entities;
+using FamilyNet.Models;
 using FamilyNet.Models.ViewModels;
 using System;
 using System.Collections.Generic;

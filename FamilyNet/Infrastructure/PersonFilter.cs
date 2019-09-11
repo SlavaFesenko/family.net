@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EntityFramework.Entities;
 using FamilyNet.Models;
-using FamilyNet.Models.Interfaces;
 using FamilyNet.Models.ViewModels;
 
 namespace FamilyNet.Infrastructure

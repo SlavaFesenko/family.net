@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.EntityFramework;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using FamilyNet.Models.ViewModels;
 using FamilyNet.Infrastructure;
 using Microsoft.Extensions.Localization;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
+using EntityFramework.Identity;
 
 namespace FamilyNet.Controllers
 {
@@ -27,7 +28,7 @@ namespace FamilyNet.Controllers
 
         // GET: CharityMakers
         [AllowAnonymous]
-        public async Task<IActionResult> Index(PersonSearchModel searchModel)
+        public IActionResult Index(PersonSearchModel searchModel)
         {
             IEnumerable<CharityMaker> charityMakers =  _unitOfWorkAsync.CharityMakers.GetAll();
 
@@ -78,7 +79,7 @@ namespace FamilyNet.Controllers
 
                 var user = await GetCurrentUserAsync();
                 user.PersonID = charityMaker.ID;
-                user.PersonType = Models.Identity.PersonType.CharityMaker;
+                user.PersonType = PersonType.CharityMaker;
                 await _unitOfWorkAsync.UserManager.UpdateAsync(user);
 
                 return RedirectToAction(nameof(Index));

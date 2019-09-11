@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190911085908_test.cs" />
+    <Compile Remove="Migrations\20190911085908_test.Designer.cs" />
     <Compile Remove="Views\Shared\Index.cshtml.cs" />
   </ItemGroup>
 
@@ -37,6 +39,11 @@
     <Folder Include="Resources\OrphanagesController\" />
     <Folder Include="wwwroot\avatars\" />
     <Folder Include="wwwroot\representatives\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFramework\EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

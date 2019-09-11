@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.EntityFramework;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
@@ -16,6 +14,9 @@ using FamilyNet.Models.ViewModels;
 using FamilyNet.Infrastructure;
 
 using Microsoft.Extensions.Localization;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
+using EntityFramework.Identity;
 
 namespace FamilyNet.Controllers
 {
@@ -104,7 +105,7 @@ namespace FamilyNet.Controllers
 
                 var user = await GetCurrentUserAsync();
                 user.PersonID = orphan.ID;
-                user.PersonType = Models.Identity.PersonType.Orphan;
+                user.PersonType = PersonType.Orphan;
                 await _unitOfWorkAsync.UserManager.UpdateAsync(user);
                 
 

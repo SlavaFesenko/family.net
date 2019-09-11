@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FamilyNet.Models;
-using FamilyNet.Models.Interfaces;
 using Microsoft.Extensions.Localization;
 using Microsoft.AspNetCore.Hosting;
+using EntityFramework.Interfaces;
 
 namespace FamilyNet.Controllers {
     public class HomeController : BaseController {

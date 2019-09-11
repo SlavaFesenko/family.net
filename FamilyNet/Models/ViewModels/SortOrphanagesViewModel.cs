@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using FamilyNet.Models;
+using EntityFramework.Entities;
 
 namespace FamilyNet.Models.ViewModels
 {

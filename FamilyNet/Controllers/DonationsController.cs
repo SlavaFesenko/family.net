@@ -2,9 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
 
 namespace FamilyNet.Controllers
 {

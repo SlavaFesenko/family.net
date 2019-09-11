@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.EntityFramework;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using FamilyNet.Models.ViewModels;
 using FamilyNet.Infrastructure;
 using Microsoft.Extensions.Localization;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
+using EntityFramework.Identity;
 
 namespace FamilyNet.Controllers {
     [Authorize]
@@ -85,7 +86,7 @@ namespace FamilyNet.Controllers {
 
                 var user = await GetCurrentUserAsync();
                 user.PersonID = volunteer.ID;
-                user.PersonType = Models.Identity.PersonType.Volunteer;
+                user.PersonType = PersonType.Volunteer;
                 await _unitOfWorkAsync.UserManager.UpdateAsync(user);
                 GetViewData();
 

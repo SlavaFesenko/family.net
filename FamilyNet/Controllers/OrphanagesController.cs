@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.Interfaces;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +13,8 @@ using System.Globalization;
 using FamilyNet.Infrastructure;
 using System;
 using System.Collections.Generic;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
 
 namespace FamilyNet.Controllers
 {

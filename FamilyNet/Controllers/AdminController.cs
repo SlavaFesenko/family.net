@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using FamilyNet.Models;
 using FamilyNet.Models.ViewModels;
-using FamilyNet.Models.Identity;
 using Microsoft.AspNetCore.Authorization;
 using FamilyNet.Infrastructure;
-using FamilyNet.Models.Interfaces;
+using EntityFramework.Interfaces;
+using EntityFramework.Identity;
+using EntityFramework;
 
 namespace FamilyNet.Controllers
 {

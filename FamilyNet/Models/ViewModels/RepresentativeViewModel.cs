@@ -1,4 +1,5 @@
-﻿using FamilyNet.Infrastructure;
+﻿using EntityFramework.Entities;
+using FamilyNet.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;

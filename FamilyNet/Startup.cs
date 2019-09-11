@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FamilyNet.Models;
-using FamilyNet.Models.EntityFramework;
-using FamilyNet.Models.Interfaces;
-using FamilyNet.Models.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +14,10 @@ using Microsoft.AspNetCore.Identity;
 using FamilyNet.Infrastructure;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using EntityFramework.Identity;
+using EntityFramework.Infrastucture;
+using EntityFramework;
+using EntityFramework.Interfaces;
 
 namespace FamilyNet
 {

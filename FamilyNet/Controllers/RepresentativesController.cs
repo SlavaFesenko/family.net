@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FamilyNet.Models;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Authorization;
 using FamilyNet.Models.ViewModels;
 using FamilyNet.Infrastructure;
+using EntityFramework.Interfaces;
+using EntityFramework.Entities;
 
 namespace FamilyNet.Controllers
 {
@@ -99,7 +100,7 @@ namespace FamilyNet.Controllers
 
                 var user = await GetCurrentUserAsync();
                 user.PersonID = representative.ID;
-                user.PersonType = Models.Identity.PersonType.Representative;
+                user.PersonType = EntityFramework.Identity.PersonType.Representative;
                 await _unitOfWorkAsync.UserManager.UpdateAsync(user);
 
                 return RedirectToAction(nameof(Index));

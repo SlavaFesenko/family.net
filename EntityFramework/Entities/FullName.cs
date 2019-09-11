@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace EntityFramework.Entities
+{
+    public class FullName
+    {
+        [Display(Name = "Ім'я")]
+        public string Name { get; set; }
+
+        [Display(Name = "Прізвище")]
+        public string Surname { get; set; }
+
+        [Display(Name = "По батькові")]
+        public string Patronymic { get; set; }
+
+        public virtual void CopyState(FullName sender)
+        {
+            Name = sender.Name;
+            Surname = sender.Surname;
+            Patronymic = sender.Patronymic;
+        }
+    }
+}

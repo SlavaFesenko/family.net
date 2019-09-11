@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using FamilyNet.Models;
 using FamilyNet.Models.ViewModels;
-using FamilyNet.Models.Identity;
 using Microsoft.AspNetCore.Authorization;
-using FamilyNet.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Localization;
+using EntityFramework.Interfaces;
+using EntityFramework.Identity;
+using FamilyNet.Infrastructure;
 
 namespace FamilyNet.Controllers
 {
